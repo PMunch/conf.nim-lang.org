@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>NimConf 2020 - Online Nim conference</title>
+    <meta charset="utf-8">
+    <meta name="charset" content="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata|Open+Sans|Titillium+Web" rel="stylesheet">
+    <link href="normalize.min.css" rel="stylesheet">
+    <link href="variables.min.css" rel="stylesheet">
+    <link href="skeletal.min.css" rel="stylesheet">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="NimConf 2020 - Online Nim conference">
+
+    <meta name="twitter:description" content="NimConf 2020 - Online Nim conference">
+    <meta property="og:description" content="NimConf 2020 - Online Nim conference">
+
+    <meta name="twitter:title" content="NimConf 2020">
+    <meta name="twitter:site" content="@nim_lang">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://nim-lang.org/assets/img/twitter_banner.png">
+
+    <meta property="og:title" content="NimConf 2020">
+    <meta property="og:site_name" content="NimConf 2020">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://nim-lang.org/assets/img/twitter_banner.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1000">
+    <meta property="og:image:height" content="500">
+    <meta property="og:image:alt" content="NimConf 2020">
+
+    <style>
+      .countdowntable {
+        border-spacing: 8px 4px;
+        margin: 0 auto;
+      }
+      .countdowntable td, .countdowntable th {
+        text-align: center;
+        background-color: #2b2e3b;
+        border-radius: 2px;
+      }
+      .countdowntable th:first-child, .countdowntable td:first-child {
+        padding-left: var(--font-size);
+      }
+      .countdowntable th:last-child, .countdowntable td:last-child {
+        padding-right: var(--font-size);
+      }
+      th > h6 {
+        margin-bottom: 0;
+      }
+      a {
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      li {
+        list-style-type: none;
+      }
+      li:before {
+        content: "» ";
+        font-weight: bold;
+        margin-right: 8px;
+        color: #ffe953;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="u-hero u-center"><img width="500px" src="nim-conf-2020.svg"/></div>
+      <div class="row">
+        <div class="seven columns">
+          <h3>Welcome to NimConf 2020!</h3>
+          <p>Mark the date: Saturday, June 20th 2020.</p>
+
+          <p>As the COVID-19 situation unfolds, many of us are stuck at home.
+          This gives us a perfect reason to set up an online conference and we are doing
+          <em>just that</em>.
+          NimConf 2020 will take place on <strong>June 20th</strong>.
+          It will be streamed for free and it doesn’t require any travelling - you will be
+          able to participate from your home, without any travel and accommodation expenses.</p>
+
+          <h4 id="participating-as-an-audience">Participating as an audience</h4>
+
+          <p>All talks will be streamed and recorded for later viewing.
+          Watching the talks live will allow you to ask questions and participate in the
+          discussions with other viewers and the speakers.</p>
+
+          <p>The timeline of talks will be published as soon as it is ready, so watch this space!</p>
+        </div>
+        <div class="five columns">
+          <div class="u-center">
+            <h4>Streaming live in:</h4>
+            <p>
+              <table class="countdowntable">
+                <thead>
+                  <tr>
+                    <th><h6>Days</h6></th>
+                    <th><h6>Hours</h6></th>
+                    <th><h6>Minutes</h6></th>
+                    <th><h6>Seconds</h6></th>
+                  </tr>
+                </thead>
+                <tbody id="countdown"></tbody>
+              </table>
+            </p>
+          </div>
+          <h4>Relevant links and discussions</h4>
+          <ul>
+            <li><a href="https://nim-lang.org/blog/2020/05/14/nim-conference.html">Announcement blog-post</a></li>
+            <li><a href="https://forum.nim-lang.org/t/6394">Hackathon discussion</a></li>
+            <li>#nimconf discussion <a href="irc://freenode.net/nimconf">IRC</a>/<a href="https://discord.gg/pnFXTKA">Discord</a> (bridged)</li>
+          </ul>
+        </div>
+      </div>
+      <!--<div class="row">
+        <div class="twelve columns">
+          <table>
+            <thead>
+              <tr>
+                <th><h6>Talk name</h6></th>
+                <th><h6>Time slot</h6></th>
+                <th><h6>Presenter</h6></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Test talk: With awesome subtitle</td>
+                <td>11AM - 12AM</td>
+                <td>Presenter McPresenterson</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>-->
+    </div>
+    <script>
+      // Set the date we're counting down to
+      var countDownDate = new Date(Date.UTC(2020, 5, 20, 11)).getTime();
+
+      var update = function() {
+
+        // Get today's date and time
+        var now = new Date().getTime();
+
+        // Find the distance between now and the count down date
+        var distance = countDownDate - now;
+
+        // Time calculations for days, hours, minutes and seconds
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        // Output the result in an element with id="demo"
+        document.getElementById("countdown").innerHTML = "<tr><td>" + days + "</td><td>" + hours + "</td><td>"
+          + minutes + "</td><td>" + seconds + "</td></tr>";
+
+        // If the count down is over, write some text
+        if (distance < 0) {
+          clearInterval(x);
+          document.getElementById("demo").innerHTML = "EXPIRED";
+        }
+      };
+      // Update the count down every 1 second
+      var x = setInterval(update, 1000);
+      update();
+    </script>
+  </body>
+</html>
