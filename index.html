@@ -286,9 +286,9 @@
         // If the count down is over, write some text
         if (distance < 0) {
           if (endDate - now >= 0) {
-            document.getElementById("countdowncontainer").innerHTML = '<h4>NimConf is live!</h4><iframe width="560" height="315" src="https://www.youtube.com/embed/lxLL3km21Aw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><p>Head over to the YouTube channel to discuss live with the presenters!</p>';
+            document.getElementById("countdowncontainer").innerHTML = '<h4>NimConf is live!</h4><iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLxLdEZg8DRwTIEzUpfaIcBqhsj09mLWHx" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><p>Head over to the YouTube channel to discuss live with the presenters!</p>';
           } else {
-            document.getElementById("countdowncontainer").innerHTML = '<h4>NimConf is over for now</h4><iframe width="560" height="315" src="https://www.youtube.com/embed/lxLL3km21Aw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><p>Head over to the YouTube channel to watch the recorded talks with comments! And welcome back for NimConf 2021</p>';
+            document.getElementById("countdowncontainer").innerHTML = '<h4>NimConf is over for now</h4><iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLxLdEZg8DRwTIEzUpfaIcBqhsj09mLWHx" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><p>Head over to the YouTube channel to watch the recorded talks with comments! And welcome back for NimConf 2021</p>';
             clearInterval(x);
           }
         }
