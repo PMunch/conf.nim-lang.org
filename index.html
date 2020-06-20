@@ -291,7 +291,43 @@
         // If the count down is over, write some text
         if (distance < 0) {
           if (endDate - now >= 0) {
-            document.getElementById("countdowncontainer").innerHTML = '<h4>NimConf is live!</h4><iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLxLdEZg8DRwTIEzUpfaIcBqhsj09mLWHx" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><p>Head over to the YouTube channel to discuss live with the presenters!</p>';
+            var url = "https://www.youtube.com/embed/videoseries?list=PLxLdEZg8DRwTIEzUpfaIcBqhsj09mLWHx";
+            var talk7 = new Date(Date.UTC(2020, 5, 20, 14, 45)).getTime();
+            var talk8 = new Date(Date.UTC(2020, 5, 20, 15, 45)).getTime();
+            var talk9 = new Date(Date.UTC(2020, 5, 20, 16, 45)).getTime();
+            var talk10 = new Date(Date.UTC(2020, 5, 20, 17, 30)).getTime();
+            var talk11 = new Date(Date.UTC(2020, 5, 20, 18, 15)).getTime();
+            var talk12 = new Date(Date.UTC(2020, 5, 20, 18, 55)).getTime();
+            var talk12 = new Date(Date.UTC(2020, 5, 20, 19, 25)).getTime();
+            var talk13 = new Date(Date.UTC(2020, 5, 20, 19, 55)).getTime();
+            var talk14 = new Date(Date.UTC(2020, 5, 20, 20, 40)).getTime();
+            if (now > talk7 && now < talk8) {
+              url += "&index=7";
+            }
+            if (now > talk8 && now < talk9) {
+              url += "&index=8";
+            }
+            if (now > talk9 && now < talk10) {
+              url += "&index=9";
+            }
+            if (now > talk10 && now < talk11) {
+              url += "&index=10";
+            }
+            if (now > talk11 && now < talk12) {
+              url += "&index=11";
+            }
+            if (now > talk12 && now < talk13) {
+              url += "&index=12";
+            }
+            if (now > talk13 && now < talk14) {
+              url += "&index=13";
+            }
+            if (now > talk14) {
+              url += "&index=14";
+            }
+
+
+            document.getElementById("countdowncontainer").innerHTML = '<h4>NimConf is live!</h4><iframe width="560" height="315" src="' + url + '" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><p>Head over to the YouTube channel to discuss live with the presenters!</p>';
           } else {
             document.getElementById("countdowncontainer").innerHTML = '<h4>NimConf is over for now</h4><iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLxLdEZg8DRwTIEzUpfaIcBqhsj09mLWHx" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><p>Head over to the YouTube channel to watch the recorded talks with comments! And welcome back for NimConf 2021</p>';
             clearInterval(x);
