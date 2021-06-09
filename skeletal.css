@@ -329,7 +329,7 @@ form {
 .u-uppcase {
   text-transform: uppercase; }
 .u-hero > * {
-  margin-top: var(--hero-padding); }
+  margin-top: 0; }
 .u-hero > .row {
   margin-right: 0rem;
   margin-left: 0rem; }
